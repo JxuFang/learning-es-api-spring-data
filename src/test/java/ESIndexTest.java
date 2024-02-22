@@ -22,7 +22,7 @@ public class ESIndexTest {
     private ElasticsearchClient elasticsearchClient;
 
     @Test
-    void testIndexCreate() {
+    void testCreateIndex() {
         IndexOperations indexOperations = elasticsearchOperations.indexOps(Person.class);
         // 设置索引基本信息
 
@@ -32,9 +32,16 @@ public class ESIndexTest {
     }
 
     @Test
-    void testIndexDelete() {
+    void testDeleteIndex() {
         IndexOperations indexOperations = elasticsearchOperations.indexOps(Person.class);
         indexOperations.delete();
     }
+
+    @Test
+    void testSearchIndex(){
+        IndexOperations indexOperations = elasticsearchOperations.indexOps(Person.class);
+        indexOperations.getInformation()
+    }
+
 
 }

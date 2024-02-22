@@ -1,6 +1,8 @@
 package com.example.es.po;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
@@ -11,6 +13,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
  */
 @Document(indexName = "persons")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Person {
 
     @Id
@@ -20,6 +24,6 @@ public class Person {
 
     private String gender;
 
-    private String age;
+    private Integer age;
 
 }
