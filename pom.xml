@@ -17,8 +17,6 @@
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
-        <!--  version of the RestHighLevelClient	 -->
-        <elasticsearch.version>7.17.15</elasticsearch.version>
     </properties>
 
     <dependencies>
